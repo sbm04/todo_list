@@ -1,0 +1,202 @@
+/* the background image added in the body */
+body {
+  position: relative;
+  margin: 0%;
+  font-family: sans-serif;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-image: linear-gradient(120deg, #487eb0, #fbc531);
+  min-height: 100vh;
+}
+/* the heading section */
+.heading {
+  margin-top: 2rem;
+  text-align: center;
+  color: grey;
+}
+/* main container */
+#container {
+  margin: auto;
+  max-width: 450px;
+  min-width: 450px;
+  /* background-color: rgba(0, 0, 0, 0.1);  */
+  background: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 238, 255, 0.5),
+        rgba(0, 255, 0, 0) 70.71%
+      )
+      beige;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+/* .add-containe {
+  border: 2px solid green;
+} */
+/* the  text-area-description section of the description part */
+.dis-box {
+  border-radius: 15px;
+  padding: 7px;
+  width: 416px;
+  overflow: hidden;
+  margin: 24px 2px 7px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  /* border: 2px solid red; */
+}
+/*  text-area-description paragraph */
+.dis-box p {
+  text-align: center;
+}
+#input-box {
+  width: 90%;
+  border: 0;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0);
+}
+.catgry-date {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid green; */
+}
+/* the catagory and date section */
+.category-contrn,
+.date-container {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  width: 200px;
+  height: 60px;
+  margin: 4px 2px;
+  padding: 8px;
+  /* border: 2px solid blue; */
+}
+/*-----button-container---- */
+.button-container {
+  max-width: 450px;
+  min-width: 445px;
+  position: absolute;
+  /* border: 2px solid yellow; */
+}
+/* -----button setup---- */
+.button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+.button-container i {
+  padding: 0px 12px 0px 0px;
+}
+.delete-button {
+  position: relative;
+  top: 2px;
+  left: 236px;
+  /* margin-right: 200px; */
+}
+.delete-button i {
+  padding: 0px 12px 0px 0px;
+}
+.submit-button {
+  position: relative;
+  left: 63px;
+}
+.color-delete {
+  background-color: rgba(241, 133, 133, 0.9);
+}
+/* ----when we click on checked box make overline on it----- */
+input[type="checkbox"]:checked + p {
+  color: red;
+  text-decoration: line-through;
+}
+/* -------todo list container  --- */
+.contact-ul {
+  border: 1px solid yellow;
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-li {
+  color: rgb(252, 252, 252);
+  list-style-type: none;
+  max-width: 320px;
+  min-height: 55px;
+  max-height: 55px;
+  margin: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 2px solid red; */
+}
+.contact-li p {
+  padding: 0px;
+  margin: 0%;
+}
+.contact {
+  display: flex;
+}
+/* ------detaile of task container----- */
+.detail {
+  display: flex;
+  min-width: 218px;
+  max-width: 218px;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 3px solid blue; */
+  overflow: hidden;
+}
+.discptn-show {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3px;
+  max-height: 51px;
+  /* border: 3px solid rgb(251, 255, 0); */
+}
+.catary-container {
+  position: relative;
+  /* border: 3px solid rgb(0, 247, 255); */
+}
+.catary-show {
+  width: 80px;
+  height: 24px;
+  top: 10px;
+  background-image: linear-gradient(120deg, #487eb0, #fbc531);
+  position: relative;
+  border-radius: 10px;
+  border: 0.5px solid rgb(247, 243, 247);
+}
+.catary-show p {
+  margin: 0;
+  padding: 4px;
+}
+.date-contn {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3px;
+  max-height: 51px;
+  /* border: 3px solid rgb(0, 255, 76); */
+}
+.date-contn i {
+  padding: 0px 12px 0px 0px;
+}

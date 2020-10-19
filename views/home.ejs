@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=title%></title>
+  <script
+      src="https://kit.fontawesome.com/576f3bfe75.js"
+      crossorigin="anonymous"
+    ></script>
+  <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body>
+  <!-- the heading section -->
+  <h1  class="heading">TODO App</h1>
+
+
+  <!-- form submission and list to task container  -->
+  <div id="container">
+     <div class="add-container">
+
+       <!-- form to create the task -->
+        <form action="/create-todolist" method="post">
+
+          <!-- the description section -->
+         <div class="dis-box">
+                <label>DESCRIPTION</label>
+                <br>
+               <p>
+                 <!-- the description box take input -->
+                  <input id="input-box"  name="description" type="text" placeholder="Add Discription">
+                </p>
+         </div>
+         <!-- the catgory section -->
+         <div class="catgry-date">
+         <div class="category-contrn">
+            <label for="CATEGORY">CATEGORY:</label><br>
+              <select id="input-box" name="catagory">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="School">School</option>
+                <option value="Cleanning">Cleanning</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+             <!-- the date section -->
+            <div class="date-container">
+              <label for="due-date">Due Date:</label><br>
+              <input type="date" id="input-box" name="due_date">
+            </div>
+           </div>
+          
+      <!-- the buttons to add the task -->
+        <div class="button-container">
+          <!-- the form actioon for getting the deleted task -->
+          <div class="submit-button">
+            <a href="#" class=""><button class="button" type="submit"><span><i class="fa fa-plus" aria-hidden="true"></i>Add Task</</span></button></a>
+          </div>
+        </div>
+      </form> 
+     </div>
+     <!-- the form actioon for getting the deleted task -->
+     <div>
+       <form action="delete-todolist" method="GET">
+         <!-- delete button -->
+        <div class="delete-button">
+           <button class="button color-delete" type="submit" value="Submit"><span><i class="fas fa-trash"></i></span></i>Delete</button>
+        </div>
+        <!-- the task list heading -->
+        <h1   class="heading" >List</h1>
+       <ul>
+         <% for(let i of todo_list) { %>
+            <!-- new added tasks list -->
+            <li class="contact-li gradient-border">
+              <div  class="detail">
+                <!-- description show -->
+                 <div class="discptn-show">
+                  <input type="checkbox" class ="text" name="<%=i._id %>" >
+                  <p><%=i.description%></p>
+                 </div>
+                 <!-- date-show -->
+                   <div class="date-contn">
+                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                    <p><%=i.due_date%></p>
+                  </div>
+                 
+                </div>    
+                <!-- catagory-show -->
+                <div class="catary-container">
+                  <div class="catary-show">
+                    <p><%=i.catagory%></p>
+                  </div>
+                </div>
+
+            </li>
+           
+            <%}%>
+       </ul>
+     </div>
+    </form> 
+  </div>
+</body>
+</html>
